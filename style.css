@@ -26,9 +26,44 @@ html {
     width: 100%;
 }
 
-.img-box {
+.container-cards {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-left: calc(10% - 55px);
+}
+
+.container-cards .cards {
+    position: relative;
+    margin: 15px 0;
+}
+
+.container-cards .text{
+    position: absolute;
+    color: var(--White);
+    padding: 10px;
+    top: 0;
+}
+
+.container-cards .back-card {
+    position: relative;
+    left: 100px;
+}
+
+.container-img-desktop {
     width: 100%;
     max-width: 483px;
+    height: 100%;
+    margin-right: 25px;
+}
+
+.img-box {
+    display: block;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
 }
 
 .form-container {
@@ -93,6 +128,7 @@ html {
 }
 
 .btn {
+    flex-grow: 1;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 700;

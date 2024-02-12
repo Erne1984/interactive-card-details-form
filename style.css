@@ -26,37 +26,87 @@ html {
     width: 100%;
 }
 
-.container-cards {
+.container-cards-desktop {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    margin-left: calc(10% - 55px);
+    width: 555px;
+    flex-wrap: wrap;
+    align-content: flex-end;
 }
 
-.container-cards .cards {
+.container-cards-desktop .front-card .img-card,
+.container-cards-desktop .back-card .img-card {
+    width: 100%;
+    height: auto;
+}
+
+.container-cards-desktop .cards {
     position: relative;
     margin: 15px 0;
 }
 
-.container-cards .text{
+.container-cards-desktop .text {
     position: absolute;
     color: var(--White);
-    padding: 10px;
+    padding: 22px;
     top: 0;
 }
 
-.container-cards .back-card {
+.card-number {
+    margin-top: 70px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+    color: var(--White);
+}
+
+.name-expire-date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 0.79em;
+    letter-spacing: 2px;
+}
+
+.name {
+    text-transform: uppercase;
+}
+
+.exp-date {}
+
+.cvc {
+    position: absolute;
+    top: 109px;
+    right: 0;
+    margin-right: 52px;
+    color: var(--White);
+}
+
+.container-cards-desktop .back-card {
     position: relative;
     left: 100px;
+}
+
+.container-cards-mobile {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 555px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    display: none;
 }
 
 .container-img-desktop {
     width: 100%;
     max-width: 483px;
     height: 100%;
-    margin-right: 25px;
+    margin-right: 230px;
 }
 
 .img-box {
@@ -64,6 +114,15 @@ html {
     width: auto;
     height: 100%;
     max-width: 100%;
+}
+
+.container-img-mobile {
+    display: none;
+}
+
+.img-mobile {
+    width: 100%;
+    height: 413px;
 }
 
 .form-container {
@@ -140,4 +199,100 @@ html {
     padding: 15px;
     text-align: center;
     margin-top: 35px;
+}
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 1200px) {
+
+    .container-cards-desktop {
+        width: 480px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container-img-desktop {
+        display: none;
+    }
+
+    .container-img-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .form-container {
+        margin-top: 75px;
+    }
+
+    .container-cards-desktop {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        margin: auto 0;
+    }
+
+    .container-cards-desktop .front-card {
+        z-index: 2;
+    }
+
+    .container-cards-desktop .back-card {
+        position: relative;
+        margin-left: 100px;
+        left: 0;
+        bottom: 418px;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .container-img-mobile .img-mobile{
+        height: 230px;
+    }
+
+    .container-cards-desktop {
+        right: 10px;
+        bottom: 160px;
+    }
+
+    .container-cards-desktop .front-card .img-card,
+    .container-cards-desktop .back-card .img-card {
+        width: 300px;
+        height: auto;
+    }
+
+    .text {
+        font-size: 0.8rem;
+    }
+
+    .card-number {
+        font-size: 0.8rem;
+        margin-top: 27px;
+    }
+
+    .name-expire-date {
+        margin-top: 11px;
+    }
+
+    .container-cards-desktop .back-card {
+        bottom: 292px;
+    }
+}
+
+@media (max-width: 435px) {
+
+    .container-cards-desktop {
+        right: 15px;
+    }
+
 }

@@ -117,6 +117,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .form {
@@ -140,7 +141,6 @@ html {
     font-size: 1rem;
     border: none;
     border-radius: 5px;
-    transition: 1s;
     margin-top: 10px;
     width: 100%;
 }
@@ -186,6 +186,11 @@ html {
     padding: 15px;
     text-align: center;
     margin-top: 35px;
+}
+
+.error-msg{
+    margin-bottom: 3px;
+    color: var(--error-color);
 }
 
 /*RESPONSIVIDADE*/

@@ -75,8 +75,6 @@ html {
     text-transform: uppercase;
 }
 
-.exp-date {}
-
 .cvc {
     position: absolute;
     top: 109px;
@@ -101,7 +99,7 @@ html {
     margin-right: 230px;
 }
 
-.container-img-mobile{
+.container-img-mobile {
     display: none;
 }
 
@@ -188,7 +186,8 @@ html {
     margin-top: 35px;
 }
 
-.error-msg{
+.error-msg {
+    font-size: 0.8rem;
     margin-bottom: 3px;
     color: var(--error-color);
 }
@@ -236,11 +235,11 @@ html {
         height: auto;
     }
 
-    .front-card-mobile{
+    .front-card-mobile {
         z-index: 2;
     }
 
-    .back-card-mobile{
+    .back-card-mobile {
         top: 72px;
         z-index: 1;
         margin-left: 30px;

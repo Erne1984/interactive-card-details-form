@@ -102,41 +102,61 @@
 
       <div class="form">
 
-        <div class="box-input">
-          <label for="name" class="label">Cardholder Name</label>
-          <input id="name" class="input-text" type="text" placeholder="e.g. Jane Appleseed">
-          <small id="name-msg" class="error-msg"></small>
-        </div>
-
-        <div class="box-input">
-          <label class="label">Card Number</label>
-          <input class="input-text" id="card-number" type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
-          <small id="card-number-msg" class="error-msg"></small>
-        </div>
-
-
-        <div class="two-column-input">
-
-          <div>
-
-            <label class="label">Exp. Date (MM/YY)</label>
-
-            <div class="mounth-year">
-              <div class="box-input">
-                <input class="input-text" type="text" placeholder="MM" id="month">
-                <small id="month-msg" class="error-msg"></small>
-              </div>
-              <div class="box-input">
-                <input class="input-text" type="text" placeholder="YY" id="year">
-                <small id="year-msg" class="error-msg"></small>
-              </div>
-            </div>
+        <div class="thanks-box display-none" id="box-thanks">
+          <div class="img-confirmation">
+            <img src="./images/icon-complete.svg">
           </div>
 
-          <div class="box-cvc">
-            <label class="label">CVC</label>
-            <input id="input-cvc" class="input-text input-cvc" type="text" placeholder=" e.g. 123">
-            <small id="cvc-msg" class="error-msg"></small>
+          <div class="">
+
+          </div>
+
+          <h2 class="thanks-title">THANK YOU</h2>
+
+          <div class="thanks-msg">We've added your card details</div>
+
+        </div>
+
+        <div id="box-forms">
+
+          <div class="box-input">
+            <label for="name" class="label">Cardholder Name</label>
+            <input id="name" class="input-text" type="text" placeholder="e.g. Jane Appleseed">
+            <small id="name-msg" class="error-msg"></small>
+          </div>
+
+          <div class="box-input">
+            <label class="label">Card Number</label>
+            <input class="input-text" id="card-number" type="text" placeholder="e.g. 1234 5678 9123 0000"
+              maxlength="16">
+            <small id="card-number-msg" class="error-msg"></small>
+          </div>
+
+
+          <div class="two-column-input">
+
+            <div>
+
+              <label class="label">Exp. Date (MM/YY)</label>
+
+              <div class="mounth-year">
+                <div class="box-input">
+                  <input class="input-text" type="text" placeholder="MM" id="month">
+                  <small id="month-msg" class="error-msg"></small>
+                </div>
+                <div class="box-input">
+                  <input class="input-text" type="text" placeholder="YY" id="year">
+                  <small id="year-msg" class="error-msg"></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="box-cvc">
+              <label class="label">CVC</label>
+              <input id="input-cvc" class="input-text input-cvc" type="text" placeholder=" e.g. 123">
+              <small id="cvc-msg" class="error-msg"></small>
+            </div>
+
           </div>
 
         </div>

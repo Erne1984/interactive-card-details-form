@@ -20,6 +20,31 @@ html {
     max-width: 1440px;
 }
 
+/*box thanks*/
+
+.display-none {
+    display: none;
+}
+
+.img-confirmation {
+    text-align: center;
+}
+
+.thanks-title {
+    margin-top: 25px;
+    color: var(--Very-dark-violet);
+    text-align: center;
+}
+
+.thanks-msg {
+    margin-top: 15px;
+    color: var(--Dark-grayish-violet);
+    font-weight: 600;
+    text-align: center;
+}
+
+/*end box-thanks*/
+
 .container {
     display: flex;
     height: 100vh;

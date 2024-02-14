@@ -23,10 +23,12 @@ const msgCvc = document.querySelector("#cvc-msg");
 const displayCvcDektop = document.querySelector("#display-cvc-desktop");
 const displayCvcMobile = document.querySelector("#display-cvc-mobile");
 
+const boxThanks = document.querySelector("#box-thanks");
+const boxForms = document.querySelector("#box-forms");
 
 const btn = document.querySelector("#btn");
 
-const inputs = document.querySelectorAll(".input-text");
+const errors = document.querySelectorAll(".error-msg");
 
 function errorMsg(input, msg) {
     input.style.border = "1px solid hsl(0, 100%, 66%)";
@@ -36,6 +38,14 @@ function errorMsg(input, msg) {
 function cleanInput(input, msg) {
     input.style.border = "";
     msg.innerHTML = "";
+}
+
+function cleanAll() {
+    inputCardNumber.value = "";
+    inputName.value = "";
+    inputMonth.value = "";
+    inputYear.value = "";
+    inputCvc.value = "";
 }
 
 function validatingName() {
@@ -134,8 +144,30 @@ function validatingCvc() {
 }
 
 btn.addEventListener("click", () => {
+    let allInputsValid = true;
 
+    errors.forEach((error) => {
+        if (!error.innerHTML == "") {
+            allInputsValid = false;
+            alert("fill the fields correctly!")
+        }
+    });
+
+    if (btn.innerHTML == "Continue") {
+        allInputsValid = false;
+        boxForms.classList.toggle("display-none");
+        boxThanks.classList.toggle("display-none");
+        btn.innerHTML = "Confirm";
+        cleanAll()
+    }
+
+    if (allInputsValid) {
+        boxForms.classList.toggle("display-none");
+        boxThanks.classList.toggle("display-none");
+        btn.innerHTML = "Continue";
+    }
 })
+
 inputName.addEventListener(("blur"), () => {
     validatingName()
 })
